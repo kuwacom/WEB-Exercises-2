@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Todo from "./pages/Todo";
+import Timer from "./pages/Timer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/todo" element={<Todo />} />
+        <Route path="/timer" element={<Timer />} />
       </Routes>
     </BrowserRouter>
     </>

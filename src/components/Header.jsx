@@ -18,6 +18,8 @@ function Header() {
             <Link to="/" style={{color: 'white'}}>Home</Link>
             {' '}
             <Link to="/todo" style={{color: 'white'}}>ToDo</Link>
+            {' '}
+            <Link to="/timer" style={{color: 'white'}}>Timer</Link>
           </Box>
         </Toolbar>
       </AppBar>

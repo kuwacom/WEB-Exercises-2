@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Box, Button, Typography } from "@mui/material";
-import { AccessAlarmOutlined, MoreHorizOutlined, PlaylistAddCheckOutlined } from '@mui/icons-material';
+import { AccessAlarmOutlined, MoreHorizOutlined, PlaylistAddCheckOutlined, WbSunnyOutlined } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 
 const GridBox = ({ children, title, onClick }) => (
@@ -49,6 +49,9 @@ function Home() {
         </GridBox>
         <GridBox title='Timer' onClick={()=>{navigate('/timer')}}>
           <AccessAlarmOutlined sx={{fontSize: 120}} />
+        </GridBox>
+        <GridBox title='Weather' onClick={()=>{navigate('/weather')}}>
+          <WbSunnyOutlined sx={{fontSize: 120}} />
         </GridBox>
         <GridBox title='etc'>
           <MoreHorizOutlined sx={{fontSize: 120}} />

@@ -31,17 +31,6 @@ function Weather() {
     fetchWeather();
   }, [location]);
 
-  if (!weatherData) {
-    return (
-      <Container maxWidth="md">
-        <Paper sx={{ p: 2, boxShadow: '0px 0 15px 0 rgba(0, 0, 0, 0.2)', textAlign: 'center' }}>
-          <Typography>天気を読み込み中...</Typography>
-          <LinearProgress />
-        </Paper>
-      </Container>
-    );
-  }
-
   return (
     <Container maxWidth="md">
       <AppBar position="static">
@@ -52,6 +41,12 @@ function Weather() {
         </Toolbar>
       </AppBar>
       <Box mt={4}>
+      {
+        !weatherData ? 
+        <Paper sx={{ p: 2, boxShadow: '0px 0 15px 0 rgba(0, 0, 0, 0.2)', textAlign: 'center' }}>
+          <Typography>天気を読み込み中...</Typography>
+          <LinearProgress />
+        </Paper> :
         <Paper sx={{
           p: 2,
           boxShadow: '0px 0 15px 0 rgba(0, 0, 0, 0.2)'
@@ -115,6 +110,7 @@ function Weather() {
             </Table>
           </TableContainer>
         </Paper>
+      }
       </Box>
     </Container>
   );
